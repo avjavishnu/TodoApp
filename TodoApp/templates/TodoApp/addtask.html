@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adding task</title>
+</head>
+<body>
+<form action="addtask" method="Post">
+    {% csrf_token %}
+    <p>Task Name :</p>
+    <input name = "tname">
+    <p>End Date :</p>
+    <input name = "dtime">
+    <p>Current Status :</p>
+    <input name="tstatus">
+    <input type="submit" value ="submit">
+</form>
+</body>
+</html>

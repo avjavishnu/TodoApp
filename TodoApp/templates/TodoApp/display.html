@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task are</title>
+</head>
+<body>
+<table>
+<tr><th>Sno</th>
+  <th>Task Name</th>
+  <th>Date</th>
+  <th>Status</th>
+</tr>
+  {% for record in query %}
+  <tr>
+  <td><a href="update/{{ record.id }}" > {{ record.id }}</a></td>
+    <td> {{ record.task_name }}</td>
+    <td>{{ record.end_date }}</td>
+    <td>{{ record.status }}</td>
+    <td><a href="delete/{{ record.id }}">Delete</a></td>
+  </tr>
+{% endfor %}
+</table>
+</body>
+</html>
